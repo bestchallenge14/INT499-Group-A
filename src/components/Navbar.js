@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ size }) => {
+const Navbar = ({ size, handleLogout }) => {
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -13,6 +13,9 @@ const Navbar = ({ size }) => {
           <Link to="/cart" className="cart-btn">
             🛒 Cart <span className="cart-badge">{size}</span>
           </Link>
+          <button onClick={handleLogout} className="logout-btn">
+            Logout
+          </button>
         </div>
       </div>
     </nav>
